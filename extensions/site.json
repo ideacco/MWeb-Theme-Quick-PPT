@@ -1,0 +1,20 @@
+[
+   {
+      "title": "默认切换效果 ",
+      "variableName": "transition",
+      "inputFieldHeight": 40,
+      "exampleText": "设置翻页切换效果 none/fade/slide/convex/concave/zoom"
+   },
+   {
+      "title": "默认主题 ",
+      "variableName": "theme",
+      "inputFieldHeight": 40,
+      "exampleText": "设置默认主题 Black / White / League / Sky / Beige / Simple / Serif / Blood / Night / Moon / Solarize"
+   },
+   {
+      "title": "Code高亮语言",
+      "variableName": "codeLanguage",
+      "inputFieldHeight": 30,
+      "exampleText": "设置代码高亮语言: javascript"
+   }
+]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html lang="zh-cmn">
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if pageTitle.length %}
+    {{ pageTitle }}
+    {% else %}
+    {{ siteName }}
+    {% /if %}
+  </title>
+  <meta name="author" content="">
+  <meta name="description" content="{{ siteDes }}">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="asset/css/reveal.css">
+  <link rel="stylesheet" href="asset/css/reset.css">
+  <link rel="stylesheet" href="asset/css/monokai.css">
+
+  <!-- <link rel="stylesheet" href="asset/css/white.css"> -->
+
+  {% if ext_theme.length %}
+  <link rel="stylesheet" href="asset/css/{{ext_theme}}.css">
+  {% else %}
+  <link rel="stylesheet" href="asset/css/black.css">
+  {%/if %}
+
+  <script src="asset/js/reveal.js"></script>
+
+  <style lang="">
+    .fragment {
+      list-style: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  {% if post.tags %}
+
+  <script>
+
+  var tagList = []
+  {% for item in post.tags %} 
+    tagList.push('{{ item.name }}')
+  {% /for %}
+
+  </script>
+
+  {% /if %}

@@ -1,0 +1,89 @@
+<script>
+  var code = document.querySelectorAll('code')
+  for (i = 0; i < code.length; i++) {
+
+    code[i].setAttribute("class", "hljs");
+    code[i].setAttribute("has-highlights", "");
+    code[i].setAttribute("data-trim", "");
+    {% if ext_codeLanguage.length %}
+    code[i].setAttribute("{{ext_codeLanguage}}", "");
+    {% /if %}
+    code[i].setAttribute("data-line-numbers", codeList[i]);
+
+    console.log(`格式化代码段 ${i}`)
+    }
+
+    // 1.拿到需要格式化的数据 childPages
+    // 2.获取插入节点
+    // 3.格式化数据,并且去掉多余的元素
+    // 4.将格式化的数据插入到节点中。
+
+  // fragment  list
+  // console.log(str.replace(fragmentReg,'class="fragment">'))
+  var fragmentReg = /class="task-list-item">(\S|\s)*?\/>/g
+  var fragmentNodes = document.querySelectorAll('#fragments') // fragments 节点list
+
+  if (fragmentNodes && fragment) {
+    for (let index = 0; index < fragmentNodes.length; index++) {
+      let fragmentNodeItem = fragmentNodes[index];
+      
+      let fragmentHtml = fragment[index].replace(fragmentReg,'class="fragment">')
+      fragmentNodeItem.insertAdjacentHTML('beforeend',fragmentHtml)
+    }
+  }
+
+  
+  var regs = /<hr\/>([\S|\s]*?)<hr\/>/g
+  var repStr = /<hr\/>/g
+
+  var childNode = document.querySelectorAll('#externalPage') // externalPage 节点
+
+  if (childNode && childPages) {
+    for (let index = 0; index < childNode.length; index++) {
+      let node = childNode[index];
+
+      console.log('childPagessss',childPages)
+
+      let element = childPages[index].match(regs) // list
+      console.log('element',element)
+      for (let index = 0; index < element.length; index++) {
+        let htmlItem = `<section>` + element[index].replace(repStr,'') + `</section>`
+        node.insertAdjacentHTML('beforeend',htmlItem)
+      }
+    }
+  }
+
+
+  setTimeout(() => {
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+
+      {% if ext_transition.length %}
+        // console.log( '{{ext_transition}}' );
+        transition: '{{ ext_transition }}',
+      
+      {% /if %}
+
+
+  // transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // More info https://github.com/hakimel/reveal.js#dependencies
+  dependencies: [
+    { src: 'asset/js/highlight/highlight.js' },
+    { src: 'asset/js/search/search.js', async: true },
+    { src: 'asset/js/zoom-js/zoom.js', async: true },
+    { src: 'asset/js/notes/notes.js', async: true }
+    ]
+  });
+  console.log('初始化渲染框架')
+}, 100)
+
+</script>
+
+{{ siteOther }}
+</body>
+
+</html>

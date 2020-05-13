@@ -1,0 +1,82 @@
+
+<div class="reveal">
+
+	<div class="slides">
+		<script>
+			var codeList = []
+			var childPages = []
+			var fragment = []
+
+			{% for codes in posts %}
+
+				{% if codes.chart_codeblock.length %}
+					{% if codes.ext_codeTrim.length %}
+						codeList.push(`{{ codes.ext_codeTrim }}`)
+					{% /if %}
+				{% /if %}
+
+				{% if codes.ext_externalPage.length %}
+					childPages.push(`<hr/>`+`{{codes.desContent}}`)
+				{% /if %}
+
+				{% if codes.ext_fragment.length %}
+					fragment.push(`{{codes.desContent}}`)
+				{% /if %}
+
+			{% /for %}
+		</script>
+		
+
+		{% for p in posts %}
+
+		{% if p.ext_externalPage.length  %}
+			<section id="externalPage"
+			{% if p.ext_codeTrim.length %} data-trim data-line-numbers="{{ p.ext_codeTrim }}" {% /if %}
+			{% if p.ext_backgroundColor.length %} data-background-color="{{ p.ext_backgroundColor }}" {% /if %}
+			{% if p.ext_backgroundImage.length %} data-background-image="{{ p.ext_backgroundImage }}" {% /if %}
+			{% if p.ext_backgroundIframe.length %} data-background-iframe="{{ p.ext_backgroundIframe }}" data-background-interactive{% /if %}
+			{% if p.ext_backgroundVideo.length %} data-background-video="{{ p.ext_backgroundVideo }}" data-background-video-loop data-background-video-muted{% /if %}
+			{% if p.ext_backgroundTransition.length %} data-transition="{{ p.ext_backgroundTransition }}"{% /if %}
+			>
+			</section>
+		{% else %}
+		
+			{% if p.ext_fragment.length %}
+				<section id="fragments" 
+				{% if p.ext_codeTrim.length %} data-trim data-line-numbers="{{ p.ext_codeTrim }}" {% /if %}
+				{% if p.ext_backgroundColor.length %} data-background-color="{{ p.ext_backgroundColor }}" {% /if %}
+				{% if p.ext_backgroundImage.length %} data-background-image="{{ p.ext_backgroundImage }}" {% /if %}
+				{% if p.ext_backgroundIframe.length %} data-background-iframe="{{ p.ext_backgroundIframe }}" data-background-interactive{% /if %}
+				{% if p.ext_backgroundVideo.length %} data-background-video="{{ p.ext_backgroundVideo }}" data-background-video-loop data-background-video-muted{% /if %}
+				{% if p.ext_backgroundTransition.length %} data-transition="{{ p.ext_backgroundTransition }}"{% /if %}
+				>
+				</section>
+
+			{% else %}
+
+				<section
+				{% if p.ext_codeTrim.length %} data-trim data-line-numbers="{{ p.ext_codeTrim }}" {% /if %}
+				{% if p.ext_backgroundColor.length %} data-background-color="{{ p.ext_backgroundColor }}" {% /if %}
+				{% if p.ext_backgroundImage.length %} data-background-image="{{ p.ext_backgroundImage }}" {% /if %}
+				{% if p.ext_backgroundIframe.length %} data-background-iframe="{{ p.ext_backgroundIframe }}" data-background-interactive{% /if %}
+				{% if p.ext_backgroundVideo.length %} data-background-video="{{ p.ext_backgroundVideo }}" data-background-video-loop data-background-video-muted{% /if %}
+				{% if p.ext_backgroundTransition.length %} data-transition="{{ p.ext_backgroundTransition }}"{% /if %}
+				>
+
+				{{ p.desContent }}
+				</section>
+
+			{% /if %}
+		{% /if %}
+		
+		{% /for %}
+		
+	</div>
+</div>
+<script>
+ 
+
+  console.log('{{posts}}');
+
+
+</script>

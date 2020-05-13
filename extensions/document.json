@@ -1,0 +1,58 @@
+[
+  {
+    "title": "闪现文本",
+    "variableName": "fragment",
+    "inputFieldHeight": 22,
+    "exampleText": "开始隐藏，触发后显示(输入任意字符打开)",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "背景颜色",
+    "variableName": "backgroundColor",
+    "inputFieldHeight": 22,
+    "exampleText": "支持名称，十六进制色号，RGBA,HSL",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "背景图",
+    "variableName": "backgroundImage",
+    "inputFieldHeight": 22,
+    "exampleText": "输入图像地址，或复制文档内的图像地址",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "插入iframe网页",
+    "variableName": "backgroundIframe",
+    "inputFieldHeight": 22,
+    "exampleText": "插入网址Url",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "插入背景视频",
+    "variableName": "backgroundVideo",
+    "inputFieldHeight": 22,
+    "exampleText": "插入视频Url",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "页面过渡",
+    "variableName": "backgroundTransition",
+    "inputFieldHeight": 40,
+    "exampleText": "可选过渡效果: fade/slide/convex/concave/zoom",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "代码分段展示",
+    "variableName": "codeTrim",
+    "inputFieldHeight": 56,
+    "exampleText": "格式: 行号1 | 行号2 | 行号3,4,5 | 例如：4|9|4,8-11，表示第一次跳转到4行，第二次9行，第三次是4行 + 8至11行",
+    "isThemeExtension": 0
+  },
+  {
+    "title": "纵向长页面",
+    "variableName": "externalPage",
+    "inputFieldHeight": 40,
+    "exampleText": "输入任意字符(均视为Yes),留空表示不开启,纵向页面不支持背景及代码块",
+    "isThemeExtension": 0
+  }
+]
