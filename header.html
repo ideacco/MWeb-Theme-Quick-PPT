@@ -47,15 +47,3 @@
 </head>
 
 <body>
-  {% if post.tags %}
-
-  <script>
-
-  var tagList = []
-  {% for item in post.tags %} 
-    tagList.push('{{ item.name }}')
-  {% /for %}
-
-  </script>
-
-  {% /if %}

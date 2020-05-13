@@ -18,8 +18,6 @@
     // 3.格式化数据,并且去掉多余的元素
     // 4.将格式化的数据插入到节点中。
 
-  // fragment  list
-  // console.log(str.replace(fragmentReg,'class="fragment">'))
   var fragmentReg = /class="task-list-item">(\S|\s)*?\/>/g
   var fragmentNodes = document.querySelectorAll('#fragments') // fragments 节点list
 
@@ -32,7 +30,6 @@
     }
   }
 
-  
   var regs = /<hr\/>([\S|\s]*?)<hr\/>/g
   var repStr = /<hr\/>/g
 
@@ -53,7 +50,6 @@
     }
   }
 
-
   setTimeout(() => {
     Reveal.initialize({
       controls: true,
@@ -64,11 +60,9 @@
       {% if ext_transition.length %}
         // console.log( '{{ext_transition}}' );
         transition: '{{ ext_transition }}',
-      
+      {% else %}
+        transition: 'slide',
       {% /if %}
-
-
-  // transition: 'slide', // none/fade/slide/convex/concave/zoom
 
   // More info https://github.com/hakimel/reveal.js#dependencies
   dependencies: [
