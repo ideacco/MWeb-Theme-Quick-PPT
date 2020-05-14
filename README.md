@@ -1,5 +1,8 @@
 # Quick PPT 主题介绍
 Quick PPT 是一款Meb主题，用于通过Mweb快速生成可以展示用的PPT
+
+***在查看一下[Deom](http://demo.kenthink.com/theme/quick-ppt/index.html#/)***
+
 ![界面效果9](https://github.com/ideacco/MWeb-Theme-Quick-PPT/blob/master/test/images/Quick_PPT9.jpeg)
 
 ![界面效果1](https://github.com/ideacco/MWeb-Theme-Quick-PPT/blob/master/test/images/Quick_PPT1.jpeg)
