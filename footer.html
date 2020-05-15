@@ -10,7 +10,7 @@
     {% /if %}
     code[i].setAttribute("data-line-numbers", codeList[i]);
 
-    console.log(`格式化代码段 ${i}`)
+    //console.log(`格式化代码段 ${i}`)
     }
 
     // 1.拿到需要格式化的数据 childPages
@@ -39,10 +39,8 @@
     for (let index = 0; index < childNode.length; index++) {
       let node = childNode[index];
 
-      console.log('childPagessss',childPages)
-
-      let element = childPages[index].match(regs) // list
-      console.log('element',element)
+      let element = childPages[index].match(regs)
+      // console.log('element',element)
       for (let index = 0; index < element.length; index++) {
         let htmlItem = `<section>` + element[index].replace(repStr,'') + `</section>`
         node.insertAdjacentHTML('beforeend',htmlItem)
@@ -64,12 +62,15 @@
         transition: 'slide',
       {% /if %}
 
+      
+
   // More info https://github.com/hakimel/reveal.js#dependencies
   dependencies: [
     { src: 'asset/js/highlight/highlight.js' },
     { src: 'asset/js/search/search.js', async: true },
     { src: 'asset/js/zoom-js/zoom.js', async: true },
-    { src: 'asset/js/notes/notes.js', async: true }
+    { src: 'asset/js/notes/notes.js', async: true },
+    { src: 'asset/js/math/math.js', async: true }
     ]
   });
   console.log('初始化渲染框架')

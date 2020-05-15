@@ -16,5 +16,11 @@
       "variableName": "codeLanguage",
       "inputFieldHeight": 30,
       "exampleText": "设置代码高亮语言: javascript"
+   },
+   {
+      "title": "是否支持Math公式",
+      "variableName": "math",
+      "inputFieldHeight": 22,
+      "exampleText": "输入任意字符表示开启，默认不开启"
    }
 ]

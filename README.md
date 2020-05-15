@@ -1,7 +1,7 @@
 # Quick PPT 主题介绍
 Quick PPT 是一款Meb主题，用于通过Mweb快速生成可以展示用的PPT
 
-***在查看一下[Deom](http://demo.kenthink.com/theme/quick-ppt/index.html#/)***
+### 在这里查看[Deom](http://demo.kenthink.com/theme/quick-ppt/index.html#/)
 
 ![界面效果9](https://github.com/ideacco/MWeb-Theme-Quick-PPT/blob/master/test/images/Quick_PPT9.jpeg)
 
@@ -28,6 +28,7 @@ Quick PPT 主题主要功能:
 3. 代码片段高亮,并支持高亮代码跳转展示
 4. 全键盘绑定,并且支持触屏控制
 5. 单页面属性设置,支持单页面跳转效果
+6. 支持MathJax数学公式
 
 
 # 如何安装
@@ -57,6 +58,7 @@ Quick PPT 主题主要功能:
 2. 在MWEB中连续使用两次 "插入分割线"功能,进行纵向页面分割（***重要***）
 3. 除了在页面中插入两次"插入分割线"后,纵向页面的最后,也要以 两次"插入分割线"作为结束符,否则最后这页可能显示不出来了（***重要***）
 4. 另外,在纵向长页面中,由于是单页面分割,不支持闪现文本,且使用插入代码块后不会有代码块格式.
+5. 纵向页面不支持MathJax数学公式
 
 
 ## 设置自定义背景
@@ -81,6 +83,7 @@ Quick PPT 主题主要功能:
 * [ ] 在WEMB中插入,“任务列表”.
 * [ ] 每一个任务列表的一列,就设为一次展示
 * [ ] *需要注意的是,列表功能页,最好独立使用,跟其他功能可能会有冲突
+* [ ] *闪现文本不支持MathJax数学公式
 
 
 # PPT 快捷键
@@ -99,4 +102,4 @@ Quick PPT 主题主要功能:
 Quick PPT主题开发过程中遇到了很多困难，感谢 Mweb作者 [oulvhai]()的支持。
 
 
-* Quick PPT主题，使用了 [reveal.js](https://github.com/hakimel/reveal.js) | zoom.js | notes 等代码库，感谢开作者
+* Quick PPT主题，使用了 [reveal.js](https://github.com/hakimel/reveal.js) | zoom.js | notes 等代码库，感谢开源作者
